@@ -16,17 +16,26 @@ function uploadFile(req, res) {
 }
 
 const server = http.createServer((req, res) => {
+  if(req.url === '/') {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello!');
+    return;
+  }
+
   if(req.url === '/fileupload') {
     uploadFile(req, res);
     return;
   } 
   
   const fileName = '.' + url.parse(req.url).pathname;
+  
   fs.readFile('assets/' + fileName, (err, data) => {
     if(err) {
       res.writeHead(404, {'Content-Type': 'text/html'});
-      return res.end('404 not found');
+      res.end('404 not found');
+      return;
     }
+
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.end(data);
   });
