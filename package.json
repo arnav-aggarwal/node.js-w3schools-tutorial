@@ -1,0 +1,19 @@
+{
+  "name": "node.js-w3schools-tutorial",
+  "version": "1.0.0",
+  "description": "Following the tutorial found at https://www.w3schools.com/nodejs/nodejs_intro.asp",
+  "main": "myfirst.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnav-aggarwal/node.js-w3schools-tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arnav-aggarwal/node.js-w3schools-tutorial/issues"
+  },
+  "homepage": "https://github.com/arnav-aggarwal/node.js-w3schools-tutorial#readme"
+}
